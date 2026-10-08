@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Fruit Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR OVERLAY -->
+    <div id="overlay" class="overlay" onclick="closeSidebar()"></div>
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar" class="sidebar">
+
+        <div class="sidebar-header">
+            <div>
+                <h2 id="sideCompanyName">Fruit Business</h2>
+                <span>Management System</span>
+            </div>
+
+            <button class="close-btn" onclick="closeSidebar()">×</button>
+        </div>
+
+        <nav>
+
+            <button onclick="showPage('dashboard')">
+                🏠 Dashboard
+            </button>
+
+            <button onclick="showPage('products')">
+                🍎 Products
+            </button>
+
+            <button onclick="showPage('purchases')">
+                📥 Purchases
+            </button>
+
+            <button onclick="showPage('purchaseDealers')">
+                👨‍🌾 Purchase Dealers
+            </button>
+
+            <button onclick="showPage('sales')">
+                📤 Sales
+            </button>
+
+            <button onclick="showPage('saleClients')">
+                👤 Sale Clients
+            </button>
+
+            <button onclick="showPage('stock')">
+                📦 Stock
+            </button>
+
+            <div class="nav-title">REPORTS</div>
+
+            <button onclick="showPage('reports')">
+                📊 Reports
+            </button>
+
+            <button onclick="showPage('settings')">
+                ⚙️ Settings
+            </button>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- MAIN APP -->
+    <main class="app">
+
+        <!-- HEADER -->
+        <header class="topbar">
+
+            <button class="menu-btn" onclick="openSidebar()">
+                ☰
+            </button>
+
+            <div class="company-title">
+                <h1 id="companyName">Fruit Business</h1>
+                <span id="currentDateTime"></span>
+            </div>
+
+        </header>
+
+
+        <!-- PAGE CONTENT -->
+        <section id="pageContent"></section>
+
+    </main>
+
+
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+
+        <div class="modal-box">
+
+            <div class="modal-header">
+                <h2 id="modalTitle">Add</h2>
+                <button onclick="closeModal()">×</button>
+            </div>
+
+            <div id="modalContent"></div>
+
+        </div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
